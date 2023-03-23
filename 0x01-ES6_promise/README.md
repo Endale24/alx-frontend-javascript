@@ -1,181 +1,107 @@
 # 0x01. ES6 Promises
-`JavaScript` `ES6`
 
-|By: Johann Kerbrat, Engineering Manager at Uber Works|
-|:--|
-|Weight: 1|
-|Project will start Dec 20, 2022 6:00 AM, must end by Dec 22, 2022 6:00 AM|
-|was released at Dec 20, 2022 6:00 PM|
-|An auto review will be launched at the deadline|
+## Description:bulb:
 
-![promise](../images/promise.jpeg)
-
-## Resources
-**Read or watch:**
-
-- Promise
-- JavaScript Promise: An introduction
-- Await
-- Async
-- Throw / Try
-
-## Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+One simply does not use async/await without knowing promises!
 
 - Promises (how, why, and what)
-- How to use the then, resolve, catch methods
+- How to use the `then`, `resolve`, `catch` methods
 - How to use every method of the Promise object
 - Throw / Try
 - The await operator
-- How to use an async function
+- How to use an `async` function
 
-## Requirements
-- All your files will be executed on Ubuntu 18.04 LTS using NodeJS 12.11.x
-- Allowed editors: vi, vim, emacs, Visual Studio Code
-- All your files should end with a new line
-- A README.md file, at the root of the folder of the project, is mandatory
-- Your code should use the js extension
-- Your code will be tested using Jest and the command npm run test
-- Your code will be verified against lint using ESLint
-- All of your functions must be exported
+## Technologies & Tools:computer:
 
-## Setup
-Install NodeJS 12.11.x
-(in your home directory):
-```
-curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
-sudo bash nodesource_setup.sh
-sudo apt install nodejs -y
-```
+[![Jest](https://img.shields.io/badge/≡-Jest-C21325?logo=Jest&style=flat-square&labelColor=282828&logoColor=C21325)](https://jestjs.io/)
+[![Git](https://img.shields.io/badge/≡-Git-F05032?logo=git&style=flat-square&labelColor=282828)](https://git-scm.com/)
+[![Ubuntu](https://img.shields.io/badge/≡-Ubuntu-E95420?&style=flat-square&logo=Ubuntu&labelColor=282828)](https://ubuntu.com/)
+[![Babel](https://img.shields.io/badge/≡-Babel-F9DC3E?logo=Babel&style=flat-square&labelColor=282828)](https://babeljs.io/)
+[![JavaScript](https://img.shields.io/badge/≡-JavaScript-F7DF1E?logo=javascript&style=flat-square&labelColor=282828)](https://developer.mozilla.org/en-US/docs/Web/javascript)
+[![GNU_Bash](https://img.shields.io/badge/≡-GNU_Bash-4EAA25?logo=GNU-Bash&style=flat-square&labelColor=282828)](https://www.gnu.org/software/bash/)
+[![Nodejs](https://img.shields.io/badge/≡-Nodejs-339933?logo=Node.js&style=flat-square&labelColor=282828)](https://nodejs.org/en/)
+[![Vim](https://img.shields.io/badge/≡-Vim-019733?logo=Vim&style=flat-square&logoColor=019733&labelColor=282828)](https://www.vim.org/)
+[![Vagrant](https://img.shields.io/badge/≡-Vagrant-1563FF?logo=vagrant&style=flat-square&logoColor=1563FF&labelColor=282828)](https://www.vagrantup.com/)
+[![VS_Code](https://img.shields.io/badge/≡-VS_Code-007ACC?logo=visual-studio-code&style=flat-square&logoColor=007ACC&labelColor=282828)](https://code.visualstudio.com/)
+[![ESLint](https://img.shields.io/badge/≡-ESLint-4B32C3?logo=ESLint&style=flat-square&labelColor=282828&logoColor=4B32C3)](https://eslint.org/)
+[![GitHub](https://img.shields.io/badge/≡-GitHub-181717?logo=GitHub&style=flat-square&labelColor=282828)](https://github.com/)
 
-```
-$ nodejs -v
-v12.11.1
-$ npm -v
-6.11.3
-```
-## Install Jest, Babel, and ESLint
-in your project directory:
+---
 
-- Install Jest using: `npm install --save-dev jest`
-- Install Babel using: `npm install --save-dev babel-jest @babel/core @babel/preset-env @babel/cli`
-- Install ESLint using: `npm install --save-dev eslint`
-  
-## Files
-# `package.json`
+## Resources:books:
 
-```
-{
-  "scripts": {
-    "lint": "./node_modules/.bin/eslint",
-    "check-lint": "lint [0-9]*.js",
-    "dev": "npx babel-node",
-    "test": "jest",
-    "full-test": "./node_modules/.bin/eslint [0-9]*.js && jest"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/node": "^7.8.0",
-    "@babel/preset-env": "^7.6.0",
-    "eslint": "^6.4.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.17.0",
-    "jest": "^24.9.0"
-  }
-}
+Read or watch:
+
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [JavaScript Promise: An introduction](https://web.dev/promises/)
+- [Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
+- [Async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [Throw / Try](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+
+---
+
+## Requirements:hammer:
+
+- Ubuntu 18.04 LTS using NodeJS 12.22.x
+- Jest Testing Framework
+- ESLint
+
+### Install NodeJS 12.22.x
+
+```console
+foo@pop-os:~$ curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+foo@pop-os:~$ sudo bash nodesource_setup.sh
+foo@pop-os:~$ sudo apt install nodejs -y
 ```
 
-# `babel.config.js`
+### Check version
 
-```
-module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
-        },
-      },
-    ],
-  ],
-};
+```console
+foo@pop-os:~$ nodejs -v
+v12.22.1
+foo@pop-os:~$ npm -v
+6.14.12
 ```
 
-# `utils.js`
-Use when you get to tasks requiring `uploadPhoto` and `createUser`.
+### Install Jest, Babel, and ESLint
 
-```
-export function uploadPhoto() {
-  return Promise.resolve({
-    status: 200,
-    body: 'photo-profile-1',
-  });
-}
-
-
-export function createUser() {
-  return Promise.resolve({
-    firstName: 'Guillaume',
-    lastName: 'Salva',
-  });
-}
+```console
+foo@pop-os:~$ npm install --save-dev jest
+foo@pop-os:~$ npm install --save-dev babel-jest @babel/core @babel/preset-env
+foo@pop-os:~$ npm install --save-dev eslint
 ```
 
-# `.eslintrc.js`
-```
-module.exports = {
-  env: {
-    browser: false,
-    es6: true,
-    jest: true,
-  },
-  extends: [
-    'airbnb-base',
-    'plugin:jest/all',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: ['jest'],
-  rules: {
-    'no-console': 'off',
-    'no-shadow': 'off',
-    'no-restricted-syntax': [
-      'error',
-      'LabeledStatement',
-      'WithStatement',
-    ],
-  },
-  overrides:[
-    {
-      files: ['*.js'],
-      excludedFiles: 'babel.config.js',
-    }
-  ]
-};
-```
-and…
-Don’t forget to run $ npm install when you have the package.json
+---
 
-Response Data Format
-`uploadPhoto` returns a response with the format
-```
-{
-  status: 200,
-  body: 'photo-profile-1',
-}
-```
-`createUser` returns a response with the format
-```
-{
-  firstName: 'Guillaume',
-  lastName: 'Salva',
-}
-```
+## Files:card_file_box:
+
+### [0. Keep every promise you make and only make promises you can keep](./0-promise.js)
+
+### [1. Don't make a promise...if you know you can't keep it](./1-promise.js)
+
+### [2. Catch me if you can!](./2-then.js)
+
+### [3. Handle multiple successful promises](./3-all.js)
+
+### [4. Simple promise](./4-user-promise.js)
+
+### [5. Reject the promises](./5-photo-reject.js)
+
+### [6. Handle multiple promises](./6-final-user.js)
+
+### [7. Load balancer](./7-load_balancer.js)
+
+### [8. Throw error / try catch](./8-try.js)
+
+### [9. Throw an error](./9-try.js)
+
+### [10. Await / Async](./100-await.js)
+
+---
+
+## Author
+
+- **Joseph Mahiuha** (@Mahiuha) - [<img src="https://img.shields.io/badge/Portfolio-20d6fe.svg?&style=plastic"/>](https://mahiuha.github.io/josephmahiuha/)
+  [<img src="https://img.shields.io/badge/Twitter-1DA1F2.svg?&style=plastic&logo=twitter&logoColor=white"/>](https://twitter.com/Joseph_Mahiuha)
+  [<img src="https://img.shields.io/badge/Linkedin-0A66C2.svg?&style=plastic&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/joseph-mahiuha-498a52162/)
+  [<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=plastic&logo=github&logoColor=white"/>](https://github.com/Mahiuha)
